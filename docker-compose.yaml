@@ -16,5 +16,8 @@ services:
 
   service:
     build: .
-volumes:
-  pgdata:
+    ports:
+      - "8083:8083"
+    depends_on:
+      - postgres
+
